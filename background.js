@@ -8,4 +8,7 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
       chrome.tabs.remove(tabs[0].id);
     });
   }
+  if (data.redirect === "yes") {
+    chrome.tabs.create({ url: "https://10.100.1.1:8090/" });
+  }
 });
