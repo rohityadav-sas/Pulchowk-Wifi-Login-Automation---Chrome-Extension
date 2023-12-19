@@ -1,5 +1,7 @@
-chrome.history.onVisited.addListener((tab) => {
-  chrome.tabs.sendMessage(100, { url: tab.url });
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete') {
+    chrome.tabs.sendMessage(tabId, { url: tab.url });
+  }
 });
 
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
