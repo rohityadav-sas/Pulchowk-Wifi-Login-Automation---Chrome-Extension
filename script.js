@@ -42,15 +42,16 @@ password.addEventListener("click", () => {
 
 username.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    event.preventDefault();
-    password.focus();
+    event.stopPropagation();
+    if (!username.value) { username.placeholder = "Enter username"; } else { password.focus(); }
   }
 });
 
 password.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
-    event.preventDefault();
+    event.stopPropagation();
     button.click();
+    if (password.value) { password.blur(); }
   }
 });
 
