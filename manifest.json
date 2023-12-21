@@ -21,8 +21,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://10.100.1.1:8090/*",
-                "https://pcampus.edu.np/login-successful/"
+                "<all_urls>"
             ],
             "js": [
                 "index.js"

@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
-  if (data.url === "https://pcampus.edu.np/login-successful/") {
+  if (data.url.includes("successful")) {
     chrome.runtime.sendMessage({ closeTab: "yes" });
   }
 
