@@ -4,14 +4,14 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
   }
 
   if (data.url.includes("https://10.100.1.1:8090/")) {
-    chrome.storage.local.get(null, async (result) => {
+    (async () => {
       let { uname, pword } = await getLocalData();
       if (uname && pword) {
         username.value = uname;
         password.value = pword;
       }
       loginbutton.click();
-    });
+    })();
   }
 });
 
