@@ -1,4 +1,5 @@
 let button = document.getElementsByTagName("button")[0];
+let loginbtn = document.getElementsByTagName("button")[1];
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let eye = document.getElementById("eye");
@@ -39,12 +40,26 @@ password.addEventListener("click", () => {
   password.placeholder = "";
 });
 
+username.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    password.focus();
+  }
+});
+
 password.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     button.click();
   }
 });
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    loginbtn.click();
+  }
+})
 
 chrome.storage.local.get(null, (result) => {
   if (result.uname && result.pword) {
