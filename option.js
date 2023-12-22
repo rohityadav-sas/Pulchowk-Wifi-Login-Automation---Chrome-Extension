@@ -27,7 +27,7 @@ button.addEventListener('click', () => {
         setTimeout(() => {
             textAnimate.style.transform = 'translate(0px)';
             textAnimate.style.opacity = '1';
-        }, 50);
+        }, 100);
         setTimeout(() => {
             location.href = 'https://10.100.1.1:8090/';
         }, 2000);

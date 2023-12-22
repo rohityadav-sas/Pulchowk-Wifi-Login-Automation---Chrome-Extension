@@ -12,6 +12,7 @@ body {
     height: 100vh;
     width: 100vw;
     background: url('option.jpg');
+    backdrop-filter: blur(7px);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -113,10 +114,10 @@ button:hover {
 
 .textAnimate {
     font-size: 2rem;
-    color: lightgreen;
+    color: #36a236;
     transform: translate(-500px);
     opacity: 0;
-    transition: transform 0.5s ease-in-out, opacity 1.5s ease-in-out;
+    transition: transform 0.7s ease-in-out, opacity 1.2s ease-in-out;
 }
 
 
