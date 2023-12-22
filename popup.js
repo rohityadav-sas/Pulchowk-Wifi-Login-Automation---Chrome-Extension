@@ -16,6 +16,7 @@ button.addEventListener("click", () => {
     isClicked = !isClicked;
     chrome.storage.local.set({ uname: username.value, pword: password.value });
     dataSaved();
+    chrome.runtime.sendMessage({ removePopup: 'yes' })
   } else {
     username.placeholder = "Enter username";
     password.placeholder = "Enter password";
@@ -51,6 +52,7 @@ password.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.stopPropagation();
     button.click();
+    chrome.runtime.sendMessage({ removePopup: 'yes' })
     if (password.value) { password.blur(); }
   }
 });
