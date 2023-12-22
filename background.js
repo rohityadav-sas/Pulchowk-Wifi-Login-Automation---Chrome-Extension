@@ -8,7 +8,7 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId === "editInfo") {
-    chrome.tabs.create({ url: 'option.html' })
+    chrome.tabs.create({ url: 'Option/option.html' })
   }
 });
 
@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 
 chrome.storage.local.get(null, (result) => {
   if (!result.uname && !result.pword) {
-    chrome.browserAction.setPopup({ popup: 'popup.html' });
+    chrome.browserAction.setPopup({ popup: 'Popup/popup.html' });
   }
 })
 

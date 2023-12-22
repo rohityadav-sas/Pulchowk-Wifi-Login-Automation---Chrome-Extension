@@ -12,11 +12,11 @@
         "service_worker": "background.js"
     },
     "browser_action": {
-        "default_icon": "logo.png"
+        "default_icon": "assets/logo.png"
     },
     "manifest_version": 2,
     "icons": {
-        "128": "logo.png"
+        "128": "assets/logo.png"
     },
     "content_scripts": [
         {
