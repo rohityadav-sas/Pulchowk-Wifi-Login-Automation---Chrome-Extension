@@ -1,46 +1,61 @@
 # Login Chrome Extension
 
-![Extension Logo](logo.png)
+A Chrome extension for automating login to a portal.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Overview
 
-The Login Chrome Extension provides a seamless login experience for specified web portals. It automatically populates login credentials and facilitates a smooth login process.
-
-## Features
-
-- Automatic login for specified websites.
-- Credential storage for quick access.
-- Customizable options for user preferences.
+This Chrome extension simplifies the login process to a specific portal by providing automation features. It includes a popup interface for quick access and a settings option for editing login credentials.
 
 ## Installation
 
-1. Clone the repository or download the ZIP file.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" in the top right.
-4. Click on "Load unpacked" and select the folder where your extension files are located.
-5. Your extension should now be installed and active.
+1. Download the extension files.
+2. Open Chrome and go to `chrome://extensions/`.
+3. Enable "Developer mode" in the top right corner.
+4. Click "Load unpacked" and select the folder containing the extension files.
 
 ## Usage
 
 1. Click on the extension icon in the Chrome toolbar.
 2. Enter your username and password in the popup.
-3. Click "Save" to store the credentials for future use.
-4. The extension will automatically handle the login process for supported websites.
+3. Click "Save" to store your credentials.
+4. Click "Login" to open the login portal.
 
-## Configuration
+### Editing Login Data
 
-The extension can be configured by modifying the `manifest.json` file. Key configurations include:
+1. Right-click on the extension icon.
+2. Choose "Edit Data" from the context menu.
+3. Update your username and password.
+4. Click "Save" to store the changes.
 
-- **Matches**: URLs for which the content script (`index.js`) should be injected.
-- **Permissions**: Required permissions for the extension.
+### Automating Login
+
+When you click the chrome extension, it will automatically login with your saved credentials.
+
+## Features
+
+- Quick access to login portal.
+- Storage of login credentials.
+- Editable user data.
+- Automatic tab closure on successful login.
 
 ## Contributing
-Contributions to this project are welcome. Follow these steps to contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and submit a pull request.
+Contributions are welcome! Fork the repository, create a branch, make your changes, and submit a pull request.
 
-## Credits
-Author: **Rohit Yadav**
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+##Author
+
+Name : **Rohit Yadav**
 Contact: **rohityadav.se@gmail.com**
