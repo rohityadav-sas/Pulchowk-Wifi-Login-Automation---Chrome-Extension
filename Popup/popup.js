@@ -71,7 +71,7 @@ chrome.storage.local.get(null, (result) => {
     isClicked = true;
     dataSaved();
   } else {
-    eye.innerHTML = eyeUnslash;
+    eye.innerHTML = eyeSlash;
     let left = document.querySelectorAll(".left");
     left.forEach((e) => {
       e.style.marginLeft = "0";
