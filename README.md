@@ -55,7 +55,7 @@ Contributions are welcome! Fork the repository, create a branch, make your chang
 
 This project is licensed under the [MIT License](LICENSE).
 
-##Author
+## Author
 
 Name : **Rohit Yadav**
 Contact: **rohityadav.se@gmail.com**
