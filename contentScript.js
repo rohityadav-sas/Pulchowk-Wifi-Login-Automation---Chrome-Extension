@@ -11,6 +11,15 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
         password.value = pword;
       }
       loginbutton.click();
+      let loginFailed = document.getElementById('statusmessage');
+      setTimeout(async () => {
+        if (loginFailed.innerText.includes("maximum")) {
+          let { uname2, pword2 } = await getLocalData();
+          username.value = uname2;
+          password.value = pword2;
+          loginbutton.click();
+        };
+      }, 1000);
     })();
   }
 });

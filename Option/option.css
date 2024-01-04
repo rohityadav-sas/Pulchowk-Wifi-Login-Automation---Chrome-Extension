@@ -19,6 +19,7 @@ body {
 }
 
 form {
+    margin-inline: 1.5rem;
     height: 500px;
     width: 80%;
     max-width: 500px;
@@ -45,7 +46,7 @@ form div:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.5em;
     user-select: none;
 
 }
@@ -58,7 +59,7 @@ form div:nth-child(3) {
     position: relative;
 }
 
-#eye {
+.eye {
     position: absolute;
     right: 5%;
     top: 50%;
