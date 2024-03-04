@@ -61,5 +61,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 
-Name : **Rohit Yadav**
+Name : **Rohit Yadav**.
 Contact: **rohityadav.se@gmail.com**
