@@ -1,5 +1,5 @@
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
-  if (data.url.includes("https://10.100.1.1:8090/")) {
+  if (data.url.includes("https://10.100.1.1:8090/") && data.status === "complete") {
     (async () => {
       let { uname, pword } = await getLocalData();
       if (uname && pword) {
@@ -17,6 +17,11 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
         };
       }, 1000);
     })();
+  }
+  else if (data.status === "loading" || data.status === undefined) {
+    if (loginbutton.innerText.includes("logout")) {
+      chrome.runtime.sendMessage({ closeTab: 'yes' });
+    }
   }
 });
 
