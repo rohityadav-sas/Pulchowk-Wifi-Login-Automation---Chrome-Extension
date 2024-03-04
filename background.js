@@ -12,18 +12,21 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
   }
 });
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  if (changeInfo.status === 'complete') {
+chrome.tabs.onUpdated.addListener(listener);
+
+function listener(tabId, changeInfo, tab) {
+  if (tab.url.includes("successful")) {
+    chrome.tabs.remove(tabId);
+    chrome.tabs.onUpdated.removeListener(listener);
+
+  } else if (changeInfo.status === 'complete') {
     chrome.tabs.sendMessage(tabId, { url: tab.url });
   }
-});
+}
 
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
-  if (data.closeTab && data.closeTab === "yes") {
-    chrome.tabs.remove(sender.tab.id);
-  }
   if (data.redirect && data.redirect === "yes") {
-    chrome.tabs.create({ url: "https://10.100.1.1:8090/" });
+    login();
   }
   if (data.removePopup && data.removePopup === 'yes') {
     chrome.browserAction.setPopup({ popup: '' })
@@ -36,7 +39,10 @@ chrome.storage.local.get(null, (result) => {
   }
 })
 
-
 chrome.browserAction.onClicked.addListener((tab) => {
-  chrome.tabs.create({ url: "https://10.100.1.1:8090/" });
+  login();
 });
+
+function login() {
+  chrome.tabs.create({ url: "https://10.100.1.1:8090/" });
+}

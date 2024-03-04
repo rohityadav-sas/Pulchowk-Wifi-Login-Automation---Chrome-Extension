@@ -1,8 +1,4 @@
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
-  if (data.url.includes("successful")) {
-    chrome.runtime.sendMessage({ closeTab: "yes" });
-  }
-
   if (data.url.includes("https://10.100.1.1:8090/")) {
     (async () => {
       let { uname, pword } = await getLocalData();
