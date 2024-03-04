@@ -15,6 +15,10 @@ A Chrome extension for automating login to a portal.
 
 This Chrome extension simplifies the login process to a specific portal by providing automation features. It includes a popup interface for quick access and a settings option for editing login credentials.
 
+## Android
+
+If you need this extension for mobile phones. Use liter version of this extension. [Pulchowk-Wifi-Login-Automation-Lite](https://github.com/rohityadav-sas/Pulchowk-Wifi-Login-Automation-Lite).
+
 ## Installation
 
 1. Download the extension files.
