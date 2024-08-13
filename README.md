@@ -1,19 +1,17 @@
 # Login Chrome Extension
 
-A Chrome extension for automating login to a portal.
+This Chrome extension simplifies the login process to a specific portal by providing automation features. It includes a popup interface for quick access and a settings option for editing login credentials.
 
 ## Table of Contents
 
-- [Overview](#overview)
+- [Liter Version](#android)
 - [Installation](#installation)
 - [Usage](#usage)
+    - [Editing Login Data](#editing-login-data)
+    - [Automating Login](#automating-login)
 - [Features](#features)
-- [Contributing](#contributing)
 - [License](#license)
-
-## Overview
-
-This Chrome extension simplifies the login process to a specific portal by providing automation features. It includes a popup interface for quick access and a settings option for editing login credentials.
+- [Contributing](#contributing)
 
 ## Android
 
@@ -51,15 +49,10 @@ When you click the chrome extension, it will automatically login with your saved
 - Editable user data.
 - Automatic tab closure on successful login.
 
-## Contributing
-
-Contributions are welcome! Fork the repository, create a branch, make your changes, and submit a pull request.
-
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the ISC License. See the [LICENSE](./LICENSE) file for details.
 
-## Author
+## Contributing
 
-Name : **Rohit Yadav** <br>
-Contact: **rohityadav.se@gmail.com**
+Contributions are welcome! Please feel free to submit a Pull Request.
